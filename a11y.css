@@ -1,0 +1,395 @@
+/* The focus indicator is not available on the entire page */
+
+a[href]:not([tabindex="-1"]):focus,
+area[href]:not([tabindex="-1"]):focus,
+input:not([disabled]):not([tabindex="-1"]):focus,
+select:not([disabled]):not([tabindex="-1"]):focus,
+textarea:not([disabled]):not([tabindex="-1"]):focus,
+button:not([disabled]):not([tabindex="-1"]):focus,
+iframe:not([tabindex="-1"]):focus,
+[tabindex]:not([tabindex="-1"]):focus,
+[contentEditable="true"]:not([tabindex="-1"]):focus {
+  outline: auto 2px Highlight !important;
+  outline: auto 5px -webkit-focus-ring-color !important;
+}
+
+/* SR Only */
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+  clip-path: inset(50%) !important;
+  -webkit-clip-path: inset(50%) !important;
+}
+
+.fusion-footer-widget-column a {
+  text-decoration: underline;
+}
+
+#easy-sticky-sidebar-1.easy-sticky-sidebar .sticky-sidebar-button {
+  color: #000;
+}
+
+body.fusion-body .fusion-main-menu .current-menu-ancestor > a,
+body.fusion-body .fusion-main-menu .current-menu-item > a,
+body.fusion-body .fusion-main-menu .current-menu-parent > a,
+body.fusion-body .fusion-main-menu .current_page_item > a,
+body
+  .fusion-main-menu
+  > ul
+  > li
+  > a:not(.fusion-logo-link):not(.fusion-icon-sliding-bar):hover,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a,
+body .fusion-is-sticky .fusion-main-menu .fusion-main-menu-icon-active:after,
+body .fusion-is-sticky .fusion-main-menu .fusion-main-menu-icon:hover:after,
+body
+  .fusion-is-sticky
+  .fusion-main-menu
+  .fusion-main-menu-search-open
+  .fusion-main-menu-icon:after,
+body
+  .fusion-is-sticky
+  .fusion-main-menu
+  .fusion-menu
+  .fusion-main-menu-icon-active:after,
+body
+  .fusion-is-sticky
+  .fusion-main-menu
+  .fusion-widget-cart-counter
+  > a:hover:before,
+body .fusion-is-sticky .fusion-main-menu > ul > li.current-menu-item > a,
+body .fusion-is-sticky .fusion-main-menu > ul > li > a:hover,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6),
+.fusion-is-sticky .fusion-main-menu > ul > li:hover > a,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-is-sticky
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a
+  .fusion-menu-description,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a
+  .fusion-menu-description,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-is-sticky
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-is-sticky
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a
+  .fusion-menu-description,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a,
+body.avada-menu-highlight-style-background:not(.fusion-header-layout-v6)
+  .fusion-main-menu
+  > ul
+  > li:hover
+  > a
+  .fusion-menu-description,
+body
+  .fusion-main-menu
+  > ul
+  > li
+  > a:not(.fusion-logo-link):not(.fusion-icon-sliding-bar):hover {
+  color: #fff;
+}
+
+body .easy-notification-bar {
+  color: #000;
+}
+
+.hompage_fleet__description {
+  text-shadow: 0 0 3px #000, 0 0 3px #000, 0 0 3px #000, 0 0 3px #000,
+    0 0 3px #000, 0 0 3px #000;
+}
+
+.to-top-container #toTop:hover {
+  background-color: #333;
+}
+
+body .ilightbox-toolbar.metro-black a:hover,
+body #h5vp_player .plyr .plyr__control--overlaid,
+body .plyr--video .plyr__control.plyr__tab-focus,
+body .plyr--video .plyr__control:hover,
+body .plyr--video .plyr__control[aria-expanded="true"],
+body
+  .plyr__menu__container
+  .plyr__control[role="menuitemradio"][aria-checked="true"]::before,
+body
+  #h5vp_player
+  .plyr
+  .plyr__controls
+  .plyr__menu__container
+  .plyr__control[role="menuitemradio"][aria-checked="true"]:hover::after {
+  background-color: #0074c6;
+}
+
+body
+  #h5vp_player
+  .plyr
+  .plyr__controls
+  .plyr__menu__container
+  .plyr__control[role="menuitemradio"][aria-checked="true"]:hover::before,
+body
+  #h5vp_player
+  .plyr
+  .plyr__controls
+  .plyr__menu__container
+  .plyr__control[role="menuitemradio"]:hover::before {
+  background-color: #fff;
+}
+
+body .plyr--full-ui input[type="range"] {
+  color: #0074c6;
+}
+
+body #main #comment-submit,
+body #main .comment-submit,
+body #reviews input#submit,
+body .button-default,
+body .button.default,
+body .comment-form input[type="submit"],
+body .fusion-button-default,
+footer.fusion-footer-widget-area .fusion-privacy-placeholder .button-default,
+body .fusion-portfolio-one .fusion-button,
+.post-password-form input[type="submit"],
+body .slidingbar-area .button-default,
+body .ticket-selector-submit-btn[type="submit"],
+body .tml-submit-wrap input[type="submit"],
+body .wpcf7-form input[type="submit"],
+body .wpcf7-submit,
+body input.button-default {
+  color: #000;
+}
+
+body #main #comment-submit .fusion-button-text,
+body #main .comment-submit .fusion-button-text,
+body #reviews input#submit .fusion-button-text,
+body .button-default .fusion-button-text,
+body .button.default .fusion-button-text,
+body .comment-form input[type="submit"] .fusion-button-text,
+body .fusion-button-default .fusion-button-text,
+footer.fusion-footer-widget-area
+  .fusion-privacy-placeholder
+  .button-default
+  .fusion-button-text,
+body .fusion-portfolio-one .fusion-button .fusion-button-text,
+body .post-password-form input[type="submit"] .fusion-button-text,
+body .slidingbar-area .button-default .fusion-button-text,
+body .ticket-selector-submit-btn[type="submit"] .fusion-button-text,
+body .tml-submit-wrap input[type="submit"] .fusion-button-text,
+body .wpcf7-form input[type="submit"] .fusion-button-text,
+body .wpcf7-submit .fusion-button-text,
+body input.button-default .fusion-button-text {
+  color: #000;
+}
+
+body #main #comment-submit:active,
+body #main .comment-submit:active,
+body #reviews input#submit:active,
+body .button-default:active,
+body .button.default:active,
+body .comment-form input[type="submit"]:active,
+body fusion-button-default:active,
+body
+  .fusion-footer-widget-area
+  .fusion-privacy-placeholder
+  .button-default:active,
+body .fusion-portfolio-one .fusion-button:active,
+body .post-password-form input[type="submit"]:active,
+body .slidingbar-area .button-default:active,
+body .ticket-selector-submit-btn[type="submit"]:active,
+body .tml-submit-wrap input[type="submit"]:active,
+body .wpcf7-form input[type="submit"]:active,
+body .wpcf7-submit:active,
+body input.button-default:active,
+body #main #comment-submit:focus,
+body #main .comment-submit:focus,
+body #reviews input#submit:focus,
+body .button-default:focus,
+body .button.default:focus,
+body .comment-form input[type="submit"]:focus,
+body .fusion-button-default:focus,
+body
+  .fusion-footer-widget-area
+  .fusion-privacy-placeholder
+  .button-default:focus,
+body .fusion-portfolio-one .fusion-button:focus,
+body .post-password-form input[type="submit"]:focus,
+body .slidingbar-area .button-default:focus,
+body .ticket-selector-submit-btn[type="submit"]:focus,
+body .tml-submit-wrap input[type="submit"]:focus,
+body .wpcf7-form input[type="submit"]:focus,
+body .wpcf7-submit:focus,
+body input.button-default:focus,
+body #main #comment-submit:hover,
+body #main .comment-submit:hover,
+body #reviews input#submit:hover,
+body .button-default:hover,
+body .button.default:hover,
+body .comment-form input[type="submit"]:hover,
+body .fusion-button-default:hover,
+footer.fusion-footer-widget-area
+  .fusion-privacy-placeholder
+  .button-default:hover,
+body .fusion-portfolio-one .fusion-button:hover,
+body .post-password-form input[type="submit"]:hover,
+body .slidingbar-area .button-default:hover,
+body .ticket-selector-submit-btn[type="submit"]:hover,
+body .tml-submit-wrap input[type="submit"]:hover,
+body .wpcf7-form input[type="submit"]:hover,
+body .wpcf7-submit:hover,
+body input.button-default:hover {
+  color: #000;
+}
+
+body #main #comment-submit:active .fusion-button-text,
+body #main .comment-submit:active .fusion-button-text,
+body #reviews input#submit:active .fusion-button-text,
+body .button-default:active .fusion-button-text,
+body .button.default:active .fusion-button-text,
+body .comment-form input[type="submit"]:active .fusion-button-text,
+body .fusion-button-default:active .fusion-button-text,
+body
+  .fusion-footer-widget-area
+  .fusion-privacy-placeholder
+  .button-default:active
+  .fusion-button-text,
+body .fusion-portfolio-one .fusion-button:active .fusion-button-text,
+body .post-password-form input[type="submit"]:active .fusion-button-text,
+body .slidingbar-area .button-default:active .fusion-button-text,
+body .ticket-selector-submit-btn[type="submit"]:active .fusion-button-text,
+body .tml-submit-wrap input[type="submit"]:active .fusion-button-text,
+body .wpcf7-form input[type="submit"]:active .fusion-button-text,
+body .wpcf7-submit:active .fusion-button-text,
+body input.button-default:active .fusion-button-text,
+body #main #comment-submit:focus .fusion-button-text,
+body #main .comment-submit:focus .fusion-button-text,
+body #reviews input#submit:focus .fusion-button-text,
+body .button-default:focus .fusion-button-text,
+body .button.default:focus .fusion-button-text,
+body .comment-form input[type="submit"]:focus .fusion-button-text,
+body .fusion-button-default:focus .fusion-button-text,
+body
+  .fusion-footer-widget-area
+  .fusion-privacy-placeholder
+  .button-default:focus
+  .fusion-button-text,
+body .fusion-portfolio-one .fusion-button:focus .fusion-button-text,
+body .post-password-form input[type="submit"]:focus .fusion-button-text,
+body .slidingbar-area .button-default:focus .fusion-button-text,
+body .ticket-selector-submit-btn[type="submit"]:focus .fusion-button-text,
+body .tml-submit-wrap input[type="submit"]:focus .fusion-button-text,
+body .wpcf7-form input[type="submit"]:focus .fusion-button-text,
+body .wpcf7-submit:focus .fusion-button-text,
+body input.button-default:focus .fusion-button-text,
+body #main #comment-submit:hover .fusion-button-text,
+body #main .comment-submit:hover .fusion-button-text,
+body #reviews input#submit:hover .fusion-button-text,
+body .button-default:hover .fusion-button-text,
+body .button.default:hover .fusion-button-text,
+body .comment-form input[type="submit"]:hover .fusion-button-text,
+body .fusion-button-default:hover .fusion-button-text,
+footer.fusion-footer-widget-area
+  .fusion-privacy-placeholder
+  .button-default:hover
+  .fusion-button-text,
+body .fusion-portfolio-one .fusion-button:hover .fusion-button-text,
+body .post-password-form input[type="submit"]:hover .fusion-button-text,
+body .slidingbar-area .button-default:hover .fusion-button-text,
+body .ticket-selector-submit-btn[type="submit"]:hover .fusion-button-text,
+body .tml-submit-wrap input[type="submit"]:hover .fusion-button-text,
+body .wpcf7-form input[type="submit"]:hover .fusion-button-text,
+body .wpcf7-submit:hover .fusion-button-text,
+body input.button-default:hover .fusion-button-text {
+  color: #000;
+}
+
+.page__title h1 {
+  text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000,
+    0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000, 0 0 4px #000,
+    0 0 4px #000, 0 0 4px #000, 0 0 4px #000 !important;
+}
+
+body .wpcf7-captchar,
+body .wpcf7-form .wpcf7-date,
+body .wpcf7-form .wpcf7-number,
+body .wpcf7-form .wpcf7-quiz,
+body .wpcf7-form .wpcf7-select,
+body .wpcf7-form .wpcf7-text {
+  color: #424242;
+}
+
+body .wpcf7-select-parent .select-arrow {
+  color: #424242;
+}
+
+body.fusion-body select:focus + .select-arrow,
+body.fusion-body select:focus + .select2-arrow {
+  color: #424242;
+}
+
+body .wpcf7 .wpcf7-form.failed .wpcf7-response-output,
+body .wpcf7 .wpcf7-form.invalid .wpcf7-response-output,
+body .wpcf7 .wpcf7-form.spam .wpcf7-response-output,
+body .wpcf7 .wpcf7-form.unaccepted .wpcf7-response-output {
+  color: #212121;
+}
+
+.fusion-modal .modal-header .close {
+  opacity: 1;
+  color: #000;
+}
+
+.fusion-menu .current_page_item > a {
+  text-decoration: underline;
+}
+
+body div.wpforms-container-full .wpforms-form label.wpforms-error {
+  color: #e97c7c;
+}
+
+body .wpcf7-not-valid-tip {
+  color: #e97c7c;
+  font-size: 0.875em;
+}
+
+.easy-sticky-sidebar.shrink .sticky-sidebar-content {
+  visibility: hidden;
+}
+
+.ilightbox-button.ilightbox-next-button.metro-black.horizontal,
+.ilightbox-button.ilightbox-prev-button.metro-black.horizontal {
+  display: block !important;
+}
+
+.hidden {
+  display: none;
+}
