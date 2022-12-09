@@ -135,6 +135,59 @@ const a11yOnReady = ($) => (e) => {
   $(".fusion-menu .current_page_item > a").attr({
     "aria-current": "page",
   });
+
+  $('a[class^="fusion-modal"][data-toggle="modal"]').each((i, el) => {
+    const modal = $(el.getAttribute("data-target"));
+
+    const observer = new MutationObserver((mutationList) => {
+      for (const mutation of mutationList) {
+        if (modal.attr("aria-hidden") === "true") {
+          $(el).focus();
+          continue;
+        }
+
+        const focusableElements = modal.find(focusableSelector);
+
+        focusableElements.last().on("keydown", (e) => {
+          if (e.originalEvent.code === "Tab" && !e.originalEvent.shiftKey) {
+            e.preventDefault();
+            focusableElements.first().focus();
+          }
+        });
+
+        focusableElements.first().on("keydown", (e) => {
+          if (e.originalEvent.code === "Tab" && e.originalEvent.shiftKey) {
+            e.preventDefault();
+            focusableElements.last().focus();
+          }
+        });
+      }
+    });
+
+    observer.observe(modal.get(0), {
+      attributes: true,
+      attributeFilter: ["aria-hidden"],
+    });
+  });
+
+  $(".menu-item-has-children").each((i, el) => {
+    const anchor = $(el).children("a");
+    const subMenu = $(el).children(".sub-menu");
+
+    $(window).on("keydown", (e) => {
+      if (e.originalEvent.code === "Escape") {
+        subMenu.addClass("hidden");
+      }
+    });
+
+    anchor.on("focus", (e) => {
+      subMenu.removeClass("hidden");
+    });
+
+    anchor.on("mouseover", (e) => {
+      subMenu.removeClass("hidden");
+    });
+  });
 };
 
 const a11yOnLoad = ($) => (e) => {
@@ -233,7 +286,9 @@ const a11yOnLoad = ($) => (e) => {
 
   // 	Screen Reader: Services: Sufficient link text not provided
   $(".services__request-quote").each((i, el) => {
-    const label = `${$(el).text().trim()} for ${$(".services__read-more_title")
+    const label = `${$(el).text().trim()} for ${$(
+      ".services__request-quote-title"
+    )
       .eq(i)
       .text()
       .trim()}`;
@@ -244,7 +299,18 @@ const a11yOnLoad = ($) => (e) => {
   });
 
   $(".services__book-now").each((i, el) => {
-    const label = `${$(el).text().trim()} for ${$(".services__read-more_title")
+    const label = `${$(el).text().trim()} for ${$(".services__book-now-title")
+      .eq(i)
+      .text()
+      .trim()}`;
+
+    $(el).attr({
+      "aria-label": label,
+    });
+  });
+
+  $(".services__find-more").each((i, el) => {
+    const label = `${$(el).text().trim()} for ${$(".services__find-more-title")
       .eq(i)
       .text()
       .trim()}`;
@@ -362,6 +428,25 @@ const a11yOnLoad = ($) => (e) => {
     });
   });
 
+  $(".plyr__progress").each((i, el) => {
+    const input = $(el).children('input[type="range"]');
+    const tooltip = $(el).find(".plyr__tooltip");
+
+    $(window).on("keydown", (e) => {
+      if (e.originalEvent.code === "Escape") {
+        tooltip.addClass("hidden");
+      }
+    });
+
+    input.on("focus", (e) => {
+      tooltip.removeClass("hidden");
+    });
+
+    input.on("mouseover", (e) => {
+      tooltip.removeClass("hidden");
+    });
+  });
+
   $(".modal-footer .fusion-button").each((i, el) => {
     $(el).attr({
       role: "button",
@@ -382,36 +467,44 @@ const a11yOnLoad = ($) => (e) => {
   });
 
   // 	Keyboard: About Us: The focus is not trapped inside the 'Settings' list
-  // 	$(".plyr__menu .plyr__menu__container").each((i, el) => {
-  // 		const classObserver = new MutationObserver((mutationList) => {
-  // 			for (const mutation of mutationList) {
-  // 				if(!mutation.target.hasAttribute('hidden')) {
-  // 					continue
-  // 				}
+  $(".plyr__menu .plyr__menu__container div[id^='plyr-settings']").each(
+    (i, el) => {
+      const classObserver = new MutationObserver((mutationList) => {
+        for (const mutation of mutationList) {
+          if (mutation.target.hasAttribute("hidden")) {
+            $(mutation.target)
+              .parent()
+              .find('div[id^="plyr-settings"][id$="home"]')
+              .find('button[data-plyr="settings"]')
+              .get(i - 1)
+              .focus();
+            continue;
+          }
 
-  // 				const focusableElements = $(mutation.target).find(focusableSelector);
+          const focusableElements = $(mutation.target).find(focusableSelector);
 
-  // 				focusableElements.last().on("keydown", (e) => {
-  // 					if (e.originalEvent.code === "Tab" && !e.originalEvent.shiftKey) {
-  // 					  e.preventDefault();
-  // 					  focusableElements.first().focus();
-  // 					}
-  // 				});
+          focusableElements.last().on("keydown", (e) => {
+            if (e.originalEvent.code === "Tab" && !e.originalEvent.shiftKey) {
+              e.preventDefault();
+              focusableElements.first().focus();
+            }
+          });
 
-  // 				focusableElements.first().on("keydown", (e) => {
-  // 					if (e.originalEvent.code === "Tab" && e.originalEvent.shiftKey) {
-  // 					  e.preventDefault();
-  // 					  focusableElements.last().focus();
-  // 					}
-  // 				});
-  // 			}
-  // 		});
+          focusableElements.first().on("keydown", (e) => {
+            if (e.originalEvent.code === "Tab" && e.originalEvent.shiftKey) {
+              e.preventDefault();
+              focusableElements.last().focus();
+            }
+          });
+        }
+      });
 
-  // 		classObserver.observe(el, {
-  // 		  attributes: true,
-  // 		  attributeFilter: ["hidden"],
-  // 		});
-  // 	});
+      classObserver.observe(el, {
+        attributes: true,
+        attributeFilter: ["hidden"],
+      });
+    }
+  );
 };
 
 function trapFocus(element) {
