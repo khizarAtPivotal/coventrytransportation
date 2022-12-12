@@ -393,3 +393,9 @@ body .wpcf7-not-valid-tip {
 .hidden {
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .easy-sticky-sidebar {
+    display: none !important;
+  }
+}

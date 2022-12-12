@@ -105,10 +105,6 @@ const a11yOnReady = ($) => (e) => {
 
         errorEl.removeAttr("aria-hidden").removeAttr("role");
 
-        if (defaultErrorText) {
-          response.append(`<p>${defaultErrorText}</p>`);
-        }
-
         $('.wpcf7-form-control[aria-invalid="true"]').first().focus();
       });
   });
